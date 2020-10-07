@@ -1,44 +1,23 @@
-
 %{
-
 #include<stdio.h>
-
 int i;
-
 %}
-  
-  
-%%
-  
-  
-[0-9]+     {i=atoi(yytext);
-
-          if(i%2==0) 
-          
-               printf("Even");
-               
-          else
-          
-         printf("Odd");}
-         
+   
 %%
    
+[0-9]+     {i=atoi(yytext);
+          if(i%2==0) 
+          printf("Even");
+          else
+         printf("Odd");}
+%%
    
 int yywrap(){}
-
-   
 /* Driver code */
 
-int main()
-
-{
-   
-   
+int main(){
     yylex();
-    
     return 0;
-    
 } 
 
-
-/* Driver code working successfully*/
+/* Driver code working successfullyDriver code working successfullyDriver code working successfully*/
